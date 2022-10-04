@@ -4,18 +4,13 @@ class Gems(private val gems: List<Int> = emptyList()) {
     fun count() = gems.count()
     fun sum() = gems.sum()
 
-    fun splitAmong(count: Int) = if (count < 2) Split() else Split(share(gems.sorted(), count))
+    fun splitAmong(count: Int) = if (count < 2) Split() else split(gems.sorted(), count)
 
-    private fun share(sortedGems: List<Int>, count: Int): List<Gems> =
-        if (sortedGems.isEmpty()) shareNothing(count)
-        else giveToPoorest(sortedGems.first(), share(sortedGems.drop(1), count))
+    private fun split(sortedGems: List<Int>, count: Int): Split =
+        if (sortedGems.isEmpty()) emptySplit(count)
+        else split(sortedGems.drop(1), count).add(sortedGems.first())
 
-    private fun shareNothing(count: Int) = (0 until count).map { i -> Gems() }.toList()
-
-    private fun giveToPoorest(gem: Int, shares: List<Gems>): List<Gems> {
-        val poorestFirst = shares.sortedBy(Gems::sum)
-        return poorestFirst.drop(1) + (poorestFirst.first() + gem)
-    }
+    private fun emptySplit(count: Int) = Split.by(count)
 
     operator fun plus(gem: Int) = Gems(gems + gem)
     operator fun plus(other: Gems) = Gems(gems + other.gems)

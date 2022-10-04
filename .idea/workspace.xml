@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c40f5fff-3863-4877-8a1c-ad37abbd8387" name="Changes" comment="Split job into three classes Treasure, Gems and Split">
+    <list default="true" id="c40f5fff-3863-4877-8a1c-ad37abbd8387" name="Changes" comment="Whoopsy daisy">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Treasure.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Treasure.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Gems.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Gems.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Split.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Split.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/SplitTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/SplitTest.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +63,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SplitTheTreasureTest (1)">
+  <component name="RunManager" selected="JUnit.All in split-the-treasure">
     <configuration name="All in split-the-treasure" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="split-the-treasure" />
       <option name="PACKAGE_NAME" value="" />
@@ -120,8 +122,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.SplitTheTreasureTest (1)" />
         <item itemvalue="JUnit.All in split-the-treasure" />
+        <item itemvalue="JUnit.SplitTheTreasureTest (1)" />
         <item itemvalue="JUnit.SplitTest" />
         <item itemvalue="JUnit.GemsTest" />
         <item itemvalue="JUnit.SplitTheTreasureTest.assignment examples" />
@@ -136,7 +138,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1664818691437</updated>
-      <workItem from="1664818692617" duration="23488000" />
+      <workItem from="1664818692617" duration="25040000" />
     </task>
     <task id="LOCAL-00001" summary="Working solution">
       <created>1664873344939</created>
@@ -152,7 +154,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664892965155</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Whoopsy daisy">
+      <created>1664894261530</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1664894261530</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,6 +181,18 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Working solution" />
     <MESSAGE value="Split job into three classes Treasure, Gems and Split" />
-    <option name="LAST_COMMIT_MESSAGE" value="Split job into three classes Treasure, Gems and Split" />
+    <MESSAGE value="Whoopsy daisy" />
+    <option name="LAST_COMMIT_MESSAGE" value="Whoopsy daisy" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/Gems.kt</url>
+          <line>10</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
