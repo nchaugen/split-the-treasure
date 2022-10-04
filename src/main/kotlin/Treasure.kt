@@ -6,9 +6,10 @@ class Treasure(private val gems: Gems) {
 
     fun splitFairly() = splitFairly(candidateCounts(gems.sum(), gems.count()))
 
-    fun canBeSplitFairlyBy(count: Int) = splitFairly()
-            .find { split -> split.shareCount() == count }
-            .let { true }
+    fun canBeSplitFairlyBy(count: Int) = (fairSplitBy(count)) != null
+
+    private fun fairSplitBy(count: Int) =
+        splitFairly().find { split -> split.shareCount() == count }
 
     private fun splitFairly(candidateCounts: List<Int>) =
         if (candidateCounts.isEmpty()) emptySet()

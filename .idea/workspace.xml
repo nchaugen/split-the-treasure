@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c40f5fff-3863-4877-8a1c-ad37abbd8387" name="Changes" comment="Working solution">
-      <change afterPath="$PROJECT_DIR$/src/test/kotlin/GemsTest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/kotlin/SplitTest.kt" afterDir="false" />
+    <list default="true" id="c40f5fff-3863-4877-8a1c-ad37abbd8387" name="Changes" comment="Split job into three classes Treasure, Gems and Split">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Treasure.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Treasure.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/SplitTheTreasureTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/SplitTheTreasureTest.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +54,9 @@
     <key name="CreateKotlinClassDialog.RecentsKey">
       <recent name="" />
     </key>
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="" />
     </key>
@@ -88,19 +88,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SplitTheTreasureTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TreasureTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="split-the-treasure" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SplitTheTreasureTest" />
+      <option name="MAIN_CLASS_NAME" value="TreasureTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SplitTheTreasureTest.assignment examples" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TreasureTest.assignment examples" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="split-the-treasure" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SplitTheTreasureTest" />
+      <option name="MAIN_CLASS_NAME" value="TreasureTest" />
       <option name="METHOD_NAME" value="assignment examples" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -136,7 +136,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1664818691437</updated>
-      <workItem from="1664818692617" duration="22719000" />
+      <workItem from="1664818692617" duration="23488000" />
     </task>
     <task id="LOCAL-00001" summary="Working solution">
       <created>1664873344939</created>
@@ -145,7 +145,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664873344939</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Split job into three classes Treasure, Gems and Split">
+      <created>1664892965155</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1664892965155</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -164,21 +171,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Working solution" />
-    <option name="LAST_COMMIT_MESSAGE" value="Working solution" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="kotlin-function">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/Treasure.kt</url>
-          <line>6</line>
-          <properties class="Treasure" method="fairSplits">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Split job into three classes Treasure, Gems and Split" />
+    <option name="LAST_COMMIT_MESSAGE" value="Split job into three classes Treasure, Gems and Split" />
   </component>
 </project>
