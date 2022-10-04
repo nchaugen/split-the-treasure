@@ -1,40 +1,27 @@
-class Treasure(private val gems: List<Int>) {
+class Treasure(private val gems: Gems) {
 
     companion object {
-        fun of(vararg gems: Int): Treasure = Treasure(gems.toList())
+        fun of(vararg gems: Int): Treasure = Treasure(Gems(gems.toList()))
     }
 
-    fun split() = split(candidateCrewSizes(gems.sum(), gems.count())).map(List<Int>::toSet).toSet()
+    fun splitFairly() = splitFairly(candidateCounts(gems.sum(), gems.count()))
 
-    fun split(possibleCrewSizes: List<Int>) =
-        if (possibleCrewSizes.isEmpty()) emptyList()
-        else possibleCrewSizes
-            .map { crewSize -> share(gems.sorted(), crewSize) }
-            .filter(::isEqualSplit)
-            .firstOrNull() ?: emptyList()
+    fun canBeSplitFairlyBy(count: Int) = splitFairly()
+            .find { split -> split.shareCount() == count }
+            .let { true }
 
-    fun isEqualSplit(split: List<List<Int>>): Boolean {
-        val bagValuesSorted = split.map(List<Int>::sum).sorted()
-        return bagValuesSorted.first() == bagValuesSorted.last()
-    }
+    private fun splitFairly(candidateCounts: List<Int>) =
+        if (candidateCounts.isEmpty()) emptySet()
+        else candidateCounts
+            .map(gems::splitAmong)
+            .filter(Split::isFair)
+            .toSet()
 
-    fun share(gems: List<Int>, hunters: Int): List<List<Int>> {
-        if (gems.isEmpty()) return emptyBags(hunters)
-        return giveToPoorest(gems.first(), share(gems.drop(1), hunters))
-    }
+    private fun candidateCounts(gemsSum: Int, count: Int): List<Int> =
+        if (count < 2) emptyList()
+        else if (count.canShareFairly(gemsSum)) candidateCounts(gemsSum, count - 1) + count
+        else candidateCounts(gemsSum, count - 1)
 
-    private fun giveToPoorest(gem: Int, bags: List<List<Int>>): List<List<Int>> {
-        val poorestFirst = bags.sortedBy(List<Int>::sum)
-        return poorestFirst.drop(1) + setOf(poorestFirst.first() + gem)
-    }
-
-    fun emptyBags(count: Int) = (0 until count).map { i -> emptyList<Int>() }.toList()
-
-    private fun candidateCrewSizes(gemsSum: Int, crewSize: Int): List<Int> =
-        if (crewSize < 2) emptyList()
-        else if (crewSize.canShareEqually(gemsSum)) candidateCrewSizes(gemsSum, crewSize - 1) + crewSize
-        else candidateCrewSizes(gemsSum, crewSize - 1)
-
-    private fun Int.canShareEqually(gemsSum: Int) = gemsSum % this == 0
+    private fun Int.canShareFairly(gemsSum: Int) = gemsSum % this == 0
 
 }
