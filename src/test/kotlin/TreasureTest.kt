@@ -48,9 +48,9 @@ internal class TreasureTest {
     fun `assignment example 3`() {
         val treasure = Treasure.of(6, 3, 2, 4, 1)
 
-        assertThat(treasure.canBeSplitFairlyBy(2)).isTrue()
-        assertThat(treasure.canBeSplitFairlyBy(3)).isFalse()
-        assertThat(treasure.canBeSplitFairlyBy(4)).isFalse()
+        assertThat(treasure.canBeSplitFairlyAmong(2)).isTrue()
+        assertThat(treasure.canBeSplitFairlyAmong(3)).isFalse()
+        assertThat(treasure.canBeSplitFairlyAmong(4)).isFalse()
 
         assertThat(treasure.splitFairly()).containsExactly(Split.of(Gems(6, 2), Gems(3, 4, 1)))
     }
@@ -59,7 +59,7 @@ internal class TreasureTest {
     fun `assignment example 4`() {
         val treasure = Treasure.of(3, 2, 7, 7, 14, 5, 3, 4, 9, 2)
 
-        assertThat(treasure.canBeSplitFairlyBy(4)).isTrue()
+        assertThat(treasure.canBeSplitFairlyAmong(4)).isTrue()
         assertThat(treasure.splitFairly()).containsExactly(Split.of(Gems(14), Gems(7, 4, 3), Gems(7, 5, 2), Gems(9, 3, 2)))
     }
 

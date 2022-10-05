@@ -1,14 +1,16 @@
-class Gems(private val gems: List<Int> = emptyList()) {
+class Gems(gems: List<Int> = emptyList()) {
     constructor(vararg gems: Int) : this(gems.toList())
+
+    private val gems = gems.sorted()
 
     fun count() = gems.count()
     fun sum() = gems.sum()
 
-    fun splitAmong(count: Int) = if (count < 2) Split() else split(gems.sorted(), count)
+    fun splitAmong(count: Int) = if (count < 2) Split() else split(gems, count)
 
-    private fun split(sortedGems: List<Int>, count: Int): Split =
-        if (sortedGems.isEmpty()) emptySplit(count)
-        else split(sortedGems.drop(1), count).add(sortedGems.first())
+    private fun split(gems: List<Int>, count: Int): Split =
+        if (gems.isEmpty()) emptySplit(count)
+        else split(gems.drop(1), count).add(gems.first())
 
     private fun emptySplit(count: Int) = Split.by(count)
 
